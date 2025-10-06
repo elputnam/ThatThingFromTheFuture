@@ -45,13 +45,13 @@ function setup() {
   //buttons
 
  button1 = createButton('guide');
- button1.position(width*.1, height*.85);
+ button1.position(width*.1, height*.9);
  button1.mousePressed(guide);
  button2 = createButton('shuffle');
- button2.position(width*.2, height*.85);
+ button2.position(width*.3, height*.9);
  button2.mousePressed(cards);
  button3 = createButton('show');
- button3.position(width*.3, height*.85);
+ button3.position(width*.5, height*.9);
  button3.mousePressed(flipCards);
 //  button4 = createButton('shuffle');
 //  button4.position(width*.55, height*.85);
@@ -70,6 +70,7 @@ function draw() {
  textFont('Roboto Mono');
 fill(51, 255, 0);
  text('That Thing From the Future', width*.5, height*.1);
+ //guide();
 }
 
 function instructions(){
@@ -90,38 +91,38 @@ function guide(){
   rect(0, 0, width, height)
   rectMode(CENTER);
   textAlign(CENTER);
-  textSize(60);
+  textSize(50);
   fill(51,255,0);
   text('Guide', width/2, height*.2);
 
   rectMode(CORNER);
   textAlign(LEFT);
-  textSize(80);
+  textSize(40);
   text('A', width*.2, height*.3);
-  text('T', width*.2, height*.52);
-  text('O', width*.2, height*.62);
-  text('M', width*.2, height*.72)
+  text('T', width*.2, height*.54);
+  text('O', width*.2, height*.65);
+  text('M', width*.2, height*.76)
 
 
   //Arc
   fill(51,255,0);
-    textSize(30)
-  text('ARC outlines the type of future world that the “thing” comes from, and how far away it is from today. There are four types of Arc:', width*.27, height*.26, width*.5);
-  textSize(25);
-  text('Growth - a future in which “progress” has continued', width*.32, height*.34)
-  text('Collapse - a future in which society as we know it has come apart', width*.32, height*.37);
-  text('Discipline - a future in which order is deliberately coordinated or imposed', width*.32, height*.4);
-  text('Transformation – a future in which a profound historical evolution has occurred', width*.32, height*.43);
+    textSize(20)
+  text('ARC outlines the type of future world that the “thing” comes from, and how far away it is from today. There are four types of Arc:', width*.27, height*.27, width*.5);
+  textSize(15);
+  text('Growth - a future in which “progress” has continued', width*.32, height*.37)
+  text('Collapse - a future in which society as we know it has come apart', width*.32, height*.40);
+  text('Discipline - a future in which order is deliberately coordinated or imposed', width*.32, height*.43);
+  text('Transformation – a future in which a profound historical evolution has occurred', width*.32, height*.46);
 
   //Terrain
-  textSize(30)
-  text('TERRAIN is the thematic context or location where this object could be found in that future.', width*.27, height*.49, width*.5)
+ textSize(20)
+  text('TERRAIN is the thematic context or location where this object could be found in that future.', width*.27, height*.51, width*.5)
 
   //Object
-  text('OBJECT is the focus for your imagination: a specific cultural artifact that reveals something about how this future is different from today.', width*.27, height*.58, width*.5)
+  text('OBJECT is the focus for your imagination: a specific cultural artifact that reveals something about how this future is different from today.', width*.27, height*.62, width*.5)
 
   //Mood
-  text('MOOD suggests how it might feel to experience this thing from the future.', width*.27, height*.69, width*.5);
+  text('MOOD suggests how it might feel to experience this thing from the future.', width*.27, height*.73, width*.5);
 }
 
 function cards(){
@@ -132,7 +133,7 @@ function cards(){
   o = int(random(object.length));
   m = int(random(mood.length));
   rectMode(CENTER);
-  textSize(60);
+  textSize(40);
   textAlign(CENTER);
   
  
@@ -141,7 +142,7 @@ function cards(){
   for (let i = 0; i < 4; i++){
     stroke(51,255,0);
     fill(40, 40, 40);
-    rect(xCoordinates[i], height*.5, 500, 800, 50);
+    rect(xCoordinates[i], height*.5, 300, 500, 50);
     fill(51, 255, 0);
     text(labels[i], xCoordinates[i], height*.5)
   }
@@ -157,13 +158,13 @@ function flipCards(){
    for (let i = 0; i < 4; i++){
 
     fill(51, 255, 0);
-    rect(xCoordinates[i], height*.5, 500, 800, 50);
+    rect(xCoordinates[i], height*.5, 300, 500, 50);
     fill(40, 40, 40);
     textSize(40);
     text(labels[i], xCoordinates[i], height*.35);
-    textSize(55);
-    text(content[i], xCoordinates[i], height*.5, 180);
     textSize(30);
+    text(content[i], xCoordinates[i], height*.5, 180);
+    textSize(20);
     text(arc2[a2], xCoordinates[0], height*.55, 180);
   }
 }
