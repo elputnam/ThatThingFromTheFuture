@@ -1,6 +1,6 @@
 //The Thing from the Future
 
-let arc1 = ['collapse', 'discipline', 'grow', 'transformation'];
+let arc1 = ['collapse', 'discipline', 'growth', 'transformation'];
 let arc2 = ['a few years', 'a decade', 'two generations', 'a century', 'a millenium'];
 let terrain = ['agricutlure', 'the brain', 'childhood', 'citizenship', 'class', 'climate', 'cloning', 'communications', 'court', 'disease', 'drones', 'the economy', 'education', 'entertainment', 'equality', 'family', 'fashion', 'flight', 'forests', 'genetics', 'gender', 'governance', 'health', 'hobbies', 'home', 'identity', 'insects', 'intellectual property', 'journalism', 'justice', 'learning', 'memory', 'mining', 'the moon', 'music', 'oceans', 'oil', 'old age', 'pets', 'power', 'religion', 'robots', 'shopping', 'space', 'sports', 'theatre', 'travel', 'war', 'water', 'wealth', 'work', 'zombies', 'the zoo', 'wild card' ];
 let object = ['advertisement', 'artwork', 'beverage', 'book', 'bottle', 'box', 'brochure', 'building', 'candy', 'clothing', 'corporation', 'device', 'document', 'event', 'festival', 'flag', 'game', 'gift', 'headline', 'implant', 'instrument', 'jewellery', 'kit', 'law', 'logo', 'lotion', 'machine', 'magazine cover', 'map', 'mask', 'monument', 'passport', 'pill', 'plant', 'postcard', 'poster', 'product', 'prosthetic', 'public service announcement', 'relic', 'ritual', 'show', 'slogan', 'snack', 'song', 'souvenir', 'statue', 'sticker', 'symbol', 't-shirt', 'tattoo', 'tool', 'toy', 'vehicle', 'video', 'weapon', 'wildcard'
@@ -32,7 +32,6 @@ let flipA = 0;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   //colorMode(HSB, 360, 100, 100, 100);
-  background(255);
   textFont('Roboto Mono');
   a1 = int(random(arc1.length));
   a2 = int(random(arc2.length));
