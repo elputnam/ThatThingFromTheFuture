@@ -65,7 +65,7 @@ fill(51, 255, 0);
  textSize(20);
  textAlign(RIGHT);
  text('An unofficial adaptation of The Thing From the Future by EL Putnam, a game by Stuart Candy and Jeff Watson', width*0.95, height - 40);
- let a = createA('https://creativecommons.org/licenses/by-nc-sa/4.0/', '2015 CC-BY-NA-SA');
+ let a = createA('https://creativecommons.org/licenses/by-nc-sa/4.0/', '2015 CC-BY-NC-SA');
  a.position(width*.87, height-30);
 }
 
