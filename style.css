@@ -9,6 +9,10 @@ html, body {
   canvas {
     display: block;
   }
+
+  a {
+    color: rgb(51,255,0);
+  }
   
   button {
     background-color: rgb(40, 40, 40);
