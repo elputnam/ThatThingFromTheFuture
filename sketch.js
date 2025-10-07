@@ -1,4 +1,4 @@
-//That Thing from the Future
+//The Thing from the Future
 
 let arc1 = ['collapse', 'discipline', 'grow', 'transformation'];
 let arc2 = ['a few years', 'a decade', 'two generations', 'a century', 'a millenium'];
@@ -41,36 +41,33 @@ function setup() {
   m = int(random(mood.length));
  xCoordinates = [width*.2, width*.4, width*.6, width*.8]
  cards();
-  //instructions();
-  //buttons
 
+  //buttons
  button1 = createButton('guide');
- button1.position(width*.1, height*.9);
+ button1.position(width*.1, height*.85);
  button1.mousePressed(guide);
  button2 = createButton('shuffle');
- button2.position(width*.3, height*.9);
+ button2.position(width*.3, height*.85);
  button2.mousePressed(cards);
  button3 = createButton('show');
- button3.position(width*.5, height*.9);
+ button3.position(width*.5, height*.85);
  button3.mousePressed(flipCards);
-//  button4 = createButton('shuffle');
-//  button4.position(width*.55, height*.85);
-//  button4.mousePressed(cards);
-
- 
- 
-
-
 }
 
 function draw() {
-  // put drawing code here
  textSize(60);
  textAlign(CENTER);
- textFont('Roboto Mono');
+ noStroke();
 fill(51, 255, 0);
- text('That Thing From the Future', width*.5, height*.1);
+ text('The Thing From the Future', width*.5, height*.1);
  //guide();
+ fill(51, 255, 0);
+ //textFont('Arial');
+ textSize(20);
+ textAlign(RIGHT);
+ text('An unofficial adaptation of The Thing From the Future by EL Putnam, a game by Stuart Candy and Jeff Watson', width*0.95, height - 40);
+ let a = createA('https://creativecommons.org/licenses/by-nc-sa/4.0/', '2015 CC-BY-NA-SA');
+ a.position(width*.87, height-30);
 }
 
 function instructions(){
@@ -91,6 +88,7 @@ function guide(){
   rect(0, 0, width, height)
   rectMode(CENTER);
   textAlign(CENTER);
+  textFont('Roboto Mono')
   textSize(50);
   fill(51,255,0);
   text('Guide', width/2, height*.2);
@@ -136,9 +134,6 @@ function cards(){
   textSize(40);
   textAlign(CENTER);
   
- 
-
-
   for (let i = 0; i < 4; i++){
     stroke(51,255,0);
     fill(40, 40, 40);
